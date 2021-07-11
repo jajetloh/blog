@@ -1,0 +1,15 @@
+<!--<button class="btn btn-outline-dark px-1 py-0">++</button>-->
+<!--<button class="btn btn-outline-dark px-1 py-0">&#45;&#45;</button>-->
+<span class="small mr-3 c-cursor-pointer" (click)="openAll()"><fa-icon [icon]="fa.faPlus" class="mr-1"></fa-icon><fa-icon [icon]="fa.faPlus"></fa-icon></span>
+<span class="small c-cursor-pointer" (click)="closeAll()"><fa-icon [icon]="fa.faMinus" class="mr-1"></fa-icon><fa-icon [icon]="fa.faMinus"></fa-icon></span>
+<app-collapsable [isOpen]="false">
+    <div header class="d-flex align-items-center">
+        <h4 class="my-2">Prove the double angle identities for sin, cos, tan using their respective angle sum formulae</h4>
+    </div>
+    <div body class="mt-2">
+        <p>Recall that the angle sum/difference formulae for sin, cos and tan are</p>
+        <div [appMath]="latexDoubleAngles1"></div>
+        <p>For each of these, we can substitute <span [appMath]="'\\(\\phi=\\theta\\)'"></span></p>
+        <div [appMath]="latexDoubleAngles2"></div>
+    </div>
+</app-collapsable>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from "./page-content/home/home.component"
 import { MathematicsHomeComponent } from "./page-content/mathematics/mathematics-home.component"
+import { MathsTrigExercisesComponent } from "./page-content/mathematics/maths-trig-exercises/maths-trig-exercises.component"
 
 const routes: Routes = [
     {
@@ -10,7 +11,16 @@ const routes: Routes = [
     },
     {
         path: 'mathematics',
-        component: MathematicsHomeComponent,
+        children: [
+            {
+                path: '',
+                component: MathematicsHomeComponent,
+            },
+            {
+                path: 'trigonometry',
+                component: MathsTrigExercisesComponent,
+            }
+        ]
     },
 ]
 

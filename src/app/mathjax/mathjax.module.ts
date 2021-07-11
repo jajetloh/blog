@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
 import { MathDirective } from './math.directive'
 
 /**
@@ -9,10 +9,10 @@ import { MathDirective } from './math.directive'
 
 @NgModule({
     declarations: [
-        MathDirective
+        MathDirective,
     ],
     exports: [
-        MathDirective
+        MathDirective,
     ],
     imports: [
         CommonModule

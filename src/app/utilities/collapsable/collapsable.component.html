@@ -1,0 +1,9 @@
+<div class="d-flex border-bottom border-dark">
+    <div (click)="isOpen = !isOpen" class="d-inline-flex align-items-center c-cursor-pointer">
+        <fa-icon [icon]="isOpen ? fa.faCaretUp : fa.faCaretDown" class="mr-3"></fa-icon>
+        <ng-content select="[header]"></ng-content>
+    </div>
+</div>
+<div [hidden]="!isOpen">
+    <ng-content select="[body]"></ng-content>
+</div>
